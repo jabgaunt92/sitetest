@@ -1,0 +1,204 @@
+<!DOCTYPE html>
+  <head>
+    <link rel="stylesheet" href="css/styles.css">
+    <link href='https://unpkg.com/boxicons@2.0.7/css/boxicons.min.css' rel='stylesheet'>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+
+    <script>
+      MathJax = {
+        tex: {
+          tags: 'ams',
+          inlineMath: [['$', '$'], ['\\(', '\\)']]
+        },
+        svg: {
+          fontCache: 'global'
+        }
+      };
+    </script>
+
+    <script src="https://polyfill.io/v3/polyfill.min.js?features=es6"></script> 
+    <script id="MathJax-script" async src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-mml-chtml.js"></script>
+   </head>
+
+<body ontouchstart>
+
+  <nav>
+    <div class="navbar">
+      <i class='bx bx-menu'></i>
+      <div class="logo">Maths for Data Science </div>
+      <div class="nav-links">
+        <div class="sidebar-logo">
+          <span class="logo-name"></span>
+          <i class='bx bx-x' ></i>
+        </div>
+        <ul class="links">
+          <li>Calculus</li>
+          <li>
+            Linear Algebra
+            <i class='bx bxs-chevron-down htmlcss-arrow arrow  '></i>
+            <ul class="htmlCss-sub-menu sub-menu">
+              <li class="more">
+                <span>Week 2: Propositional Logic
+                <i class='bx bxs-chevron-right arrow more-arrow'></i>
+              </span>
+                <ul class="more-sub-menu sub-menu">
+                  <li><a href="2.1proppositionsandpropositionalvariables.html">2.1: Propositions and Propositional <br> <p style="margin-left:26px"> Variables </p> </a></li>
+                  <li><a href="2.2logicalconnectivesandunaryoperators.html">2.2: Logical Connectives and Unary <br> <p style="margin-left:28px"> Operators </p> </a></li>
+                  <li><a href="2.3binaryoperators.html">2.3: Binary Operators</a></li>
+                  <li><a href="2.4moduspoensandmodustollens.html">2.4: Modus Ponens and Modus Tollens </a></li>
+                  <li><a href="2.5equivalenceandconverse.html">2.5: Equivalence and Converse </a></li>
+                </ul>
+              </li>
+            </ul>
+          </li>
+        </ul>
+      </div>
+    </div>
+  </nav>
+  <script src="js/main.js"></script>
+
+
+
+<div id="maintext">
+
+
+        <h1>Modus Ponens and Modus Tollens</h1>
+
+        <div class="space"></div>
+
+        <p>
+          Before moving to the final binary operator, it is useful to introduce the following tautologies. 
+        </p>
+
+
+        <div class="space"></div>
+
+        <div class="theorem"> 
+            <h3>Theorem 4.1: Modus Ponens </h3>
+            <p class="box"> Let $P$ and $Q$ be propositional variables. The compound proposition $ ((P \Rightarrow Q ) \land P) \Rightarrow Q $ is a tautology.
+            </p>
+            <hr>
+            <p class="box">
+              The above tautology is shown via the following truth table:
+              <div class="biggerequation">
+              \begin{equation*}
+              \begin{array}{c|c|c|c|c}
+              P &  Q & P \Rightarrow Q & (P \Rightarrow Q) \land P & ((P \Rightarrow Q) \land P) \Rightarrow Q \\
+              \hline
+              T & T & T & T & T\\ 
+              T & F & F & F & T\\
+              F & T & T & F  & T\\
+              F & F & T & F & T
+              \end{array}
+              \end{equation*}
+            </div>
+            </p>
+        </div>
+
+        <div class="space"></div>
+
+<p>
+The name of this tautology translates to mean "mode that by affirming affirms". It can be summarised as $ P $ implies $Q$ and $P$ is asserted to be true, therefore $Q$ must be true. This tautology is fundamental when one wishes to construct deductive arguments or proofs. In fact, one can define a <em> <b> deductive argument </b> </em> as one in which modus ponens is used. In the context of artificial intelligence, modus ponens is often called forward chaining.   
+
+</p>
+
+        <div class="space"></div>
+
+        <div class="theorem example"> 
+            <h3>Example 4.2: Modus Ponens </h3>
+            <p class="box"> 
+              The following chains of propositions are examples of deductive arguments.              
+              <ol type="i" class="space_list">
+              <li> 1. If it is raining outside then I have my umbrella. <br> 2. It is raining outside. <br> 3. Therefore I have my umbrella. </li>
+              <li> 1. If pigs can fly then they have wings. <br> 2. Pigs can fly. <br> 3. Hence pigs have wings.  </li>
+            </p>
+        </div>
+
+        <div class="space"></div>
+
+<p>
+
+The examples in Example 4.2 demonstrate the tautological nature of modus ponens. That is, both of these arguments are valid and true independent of the truth of the individual propositions. Clearly the statements in the second example are false, but the argument is still valid. If a deductive argument is valid and all the individual propositions are true, the argument is said to be <em> <b> sound </b></em>. 
+
+<br>
+<br>
+
+A similar, but slightly different form of argument to modus ponens is modus tollens. This is another tautology and is shown in the following theorem.
+
+</p>
+
+<div class="space"></div>
+
+        <div class="theorem"> 
+            <h3>Theorem 4.3: Modus Tollens </h3>
+            <p class="box"> Let $P$ and $Q$ be propositional variables. The compound proposition $((P \Rightarrow Q ) \land \neg Q ) \Rightarrow \neg P $ is a tautology. 
+            </p>
+            <hr>
+            <p class="box">
+              The above tautology is shown via the following truth              
+              <div class="biggestequation">
+              \begin{equation*}
+              \begin{array}{c|c|c|c|c|c|c}
+              P &  Q & \neg P & \neg Q &  P \Rightarrow Q & (P \Rightarrow Q) \land \neg Q & ((P \Rightarrow Q) \land \neg Q) \Rightarrow \neg P \\
+              \hline
+              T & T & F & F & T & F & T\\ 
+              T & F & F & T & F & F & T\\
+              F & T & T & F & T & F & T\\
+              F & F & T & T & T & T & T
+              \end{array}
+              \end{equation*}
+            </div>
+            </p>
+        </div>
+
+        <div class="space"></div>
+
+<p>
+
+The name of this tautology comes from the latin for "mode that by denying denies". It simply states that if $ P $ implies $ Q $ and not $Q$ is asserted to be true, then it follows that not $P$ is true. Similar to modus ponens, the tautological nature of modus tollens demonstrates that an argument constructed using modus tollens is valid regardless of the truth of the individual atomic propositions. This is demonstrated in the following examples.
+
+</p>
+
+
+<div class="space"></div>
+
+        <div class="theorem example"> 
+            <h3>Example 4.4: Modus Tollens </h3>
+            <p class="box"> 
+              The following arguments are examples in which modus tollens has been used: 
+              <ol type="i" class="space_list">
+              <li> 1. If it is raining then I have my umbrella. <br> 2. I do not have my umbrella. <br> 3. Therefore it is not raining. </li>
+              <li> 1. If I am my fathers son then I have blue eyes. <br> 2. I do not have blue eyes. <br> 3. Then I am not my fathers son. </li>
+            </p>
+        </div>
+
+        <div class="space"></div>
+
+
+<div class="space"></div>
+
+<!-- <div class="vidlectures">
+<iframe height="420" width="100%" allowfullscreen frameborder=0 src="https://echo360.org.uk/media/525f0f36-991b-4a37-9df6-907d8b97e8a0/public?autoplay=false&automute=true"></iframe>
+</div> -->
+
+<div class="right">
+  <p class="pages"> Next page </p>
+  <a a href="2.5equivalenceandconverse.html"> <i class='bx bx-right-arrow-alt'></i> </a> 
+</div>
+
+<div class="left">
+  <a a href="2.3binaryoperators.html"> <i class='bx bx-left-arrow-alt' ></i></a>
+  <p class="pages"> Previous page </p> 
+</div>
+
+
+</div>
+
+
+
+<script src="js/script.js"> </script> 
+
+
+</body>
+</html>

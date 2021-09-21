@@ -21,12 +21,12 @@
     <script id="MathJax-script" async src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-mml-chtml.js"></script>
    </head>
 
-<body>
+<body ontouchstart>
 
   <nav>
     <div class="navbar">
       <i class='bx bx-menu'></i>
-      <div class="logo"> Data Science </div>
+      <div class="logo"> Maths for Data Science </div>
       <div class="nav-links">
         <div class="sidebar-logo">
           <span class="logo-name"></span>
@@ -43,11 +43,11 @@
                 <i class='bx bxs-chevron-right arrow more-arrow'></i>
               </span>
                 <ul class="more-sub-menu sub-menu">
-                  <li><a href="index.html">2.1: Propositions and Propositional <br> <p style="margin-left:26px"> Variables </p> </a></li>
+                  <li><a href="2.1proppositionsandpropositionalvariables.html">2.1: Propositions and Propositional <br> <p style="margin-left:26px"> Variables </p> </a></li>
                   <li><a href="2.2logicalconnectivesandunaryoperators.html">2.2: Logical Connectives and Unary <br> <p style="margin-left:28px"> Operators </p> </a></li>
                   <li><a href="2.3binaryoperators.html">2.3: Binary Operators</a></li>
-                  <li><a href="#">2.4: Modus Ponens and Modus Tollens </a></li>
-                  <li><a href="#">2.5: Equivalence and Converse </a></li>
+                  <li><a href="2.4moduspoensandmodustollens.html">2.4: Modus Ponens and Modus Tollens </a></li>
+                  <li><a href="2.5equivalenceandconverse.html">2.5: Equivalence and Converse </a></li>
                 </ul>
               </li>
             </ul>
@@ -124,7 +124,7 @@ The propositional variables that contain no logical connectives are called <b> <
 
         <div class="theorem definition"> 
             <h3>Definition 2.4: Unary Operators </h3>
-            <p class="box"> The <b> <em> unary operators </em></b> $ \neg $, $ \text{id} $, $ \top $ and $ \bot $ are defined via the following truth table:          
+            <p class="box"> The <b> <em> unary operators </em></b> $ \neg $, $ \text{id} $, $  \top $ and $ \bot $ are defined via the following truth table:          
             \begin{equation*}
             \begin{array}{c|c|c|c|c}
             P & \neg P & \text{id}(P) & \top P & \bot P\\
@@ -165,20 +165,31 @@ The propositional variables that contain no logical connectives are called <b> <
 <div class="space"></div>
 
 
-<p>
+That is, the tautology operator 
+<div class="tooltip"> $ \top $
+  <span class="tooltiptext"> As a notational point, the contradiction operator \( \bot \) is often just written by itself and not in front of a propositional variable $P$. This is because the contradiction operator simply assigns a value of false to all propositional variables. It is therefore unnecessary to specify the propositional variable as it acts on all propositional variables the same. The same notation is also adopted for the tautology operator $ \top $ for exactly the same reasoning.</span>
+</div>
+assigns all values to be true and the contradiction operator <div class="tooltip">$ \bot $
+  <span class="tooltiptext"> As a notational point, the contradiction operator \( \bot \) is often just written by itself and not in front of a propositional variable $P$. This is because the contradiction operator simply assigns a value of false to all propositional variables. It is therefore unnecessary to specify the propositional variable as it acts on all propositional variables the same. The same notation is also adopted for the tautology operator $ \top $ for exactly the same reasoning.</span>
+</div>  assigns all values to be false. 
 
-That is, the tautology operator $ \top $ assigns all values to be true and the contradiction operator $ \bot $ assigns all values to be false. 
-
-</p>
 
 <div class="space"></div>
-
 
 <!-- <div class="vidlectures">
 <iframe height="420" width="100%" allowfullscreen frameborder=0 src="https://echo360.org.uk/media/525f0f36-991b-4a37-9df6-907d8b97e8a0/public?autoplay=false&automute=true"></iframe>
 </div> -->
 
-<div class="endspace"></div>
+<div class="right">
+  <p class="pages"> Next page </p>
+  <a a href="2.3binaryoperators.html"> <i class='bx bx-right-arrow-alt'></i> </a> 
+</div>
+
+<div class="left">
+  <a a href="2.1proppositionsandpropositionalvariables.html"> <i class='bx bx-left-arrow-alt' ></i></a>
+  <p class="pages"> Previous page </p> 
+</div>
+
 
 </div>
 

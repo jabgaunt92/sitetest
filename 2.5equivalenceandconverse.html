@@ -1,0 +1,202 @@
+<!DOCTYPE html>
+  <head>
+    <link rel="stylesheet" href="css/styles.css">
+    <link href='https://unpkg.com/boxicons@2.0.7/css/boxicons.min.css' rel='stylesheet'>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+
+    <script>
+      MathJax = {
+        tex: {
+          tags: 'ams',
+          inlineMath: [['$', '$'], ['\\(', '\\)']]
+        },
+        svg: {
+          fontCache: 'global'
+        }
+      };
+    </script>
+
+    <script src="https://polyfill.io/v3/polyfill.min.js?features=es6"></script> 
+    <script id="MathJax-script" async src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-mml-chtml.js"></script>
+   </head>
+
+<body ontouchstart>
+
+  <nav>
+    <div class="navbar">
+      <i class='bx bx-menu'></i>
+      <div class="logo">Maths for Data Science </div>
+      <div class="nav-links">
+        <div class="sidebar-logo">
+          <span class="logo-name"></span>
+          <i class='bx bx-x' ></i>
+        </div>
+        <ul class="links">
+          <li>Calculus</li>
+          <li>
+            Linear Algebra
+            <i class='bx bxs-chevron-down htmlcss-arrow arrow  '></i>
+            <ul class="htmlCss-sub-menu sub-menu">
+              <li class="more">
+                <span>Week 2: Propositional Logic
+                <i class='bx bxs-chevron-right arrow more-arrow'></i>
+              </span>
+                <ul class="more-sub-menu sub-menu">
+                  <li><a href="2.1proppositionsandpropositionalvariables.html">2.1: Propositions and Propositional <br> <p style="margin-left:26px"> Variables </p> </a></li>
+                  <li><a href="2.2logicalconnectivesandunaryoperators.html">2.2: Logical Connectives and Unary <br> <p style="margin-left:28px"> Operators </p> </a></li>
+                  <li><a href="2.3binaryoperators.html">2.3: Binary Operators</a></li>
+                  <li><a href="2.4moduspoensandmodustollens.html">2.4: Modus Ponens and Modus Tollens </a></li>
+                  <li><a href="2.5equivalenceandconverse.html">2.5: Equivalence and Converse </a></li>
+                </ul>
+              </li>
+            </ul>
+          </li>
+        </ul>
+      </div>
+    </div>
+  </nav>
+  <script src="js/main.js"></script>
+
+
+
+<div id="maintext">
+
+
+        <h1>Equivalence and Converse</h1>
+
+        <div class="space"></div>
+
+        <p>
+          Returning to the binary operators, the final one that is yet to be explored is the equivalence operator $\Leftrightarrow$. As hinted by the name, this operator is used to see if two propositional variables are equivalent. This is of particular use in logic, computer science as well as mathematical proofs. For example, one may find that a particular proposition or statement is rather difficult to prove directly, but is much easier to prove an equivalent statement. Given the two statements are equivalent, a proof of one statement results in the proof of the other. Using the equivalence operator, the following definition can now be constructed. 
+        </p>
+
+
+        <div class="space"></div>
+
+        <div class="theorem definition"> 
+            <h3>Definition 5.1: Equivalence </h3>
+            <p class="box"> Let $P$ and $ Q $ be propositional variables. Then $ P $ is said to be <em> <b>equivalent </b> </em> to $ Q $ if $ P \Leftrightarrow Q $ is a tautology.
+            </p>
+        </div>
+
+        <div class="space"></div>
+
+<p>
+An alternative way of writing this definition is to instead say that two propositional variables are equivalent if their respective truth tables are identical. One sees from the definition of the equivalence operator that if the truth tables of two propositional variables, say $P$ and $Q$, are identical it follows that $ P \Leftrightarrow Q $ is a tautology. This explains why either definition can be used to prove the equivalence of two propositional variables. 
+
+<br>
+<br>
+
+Whilst the above definition suffices to prove the equivalence between two propositional variables there is a useful correspondence between the equivalence operator and implication operator. In practice, it is this connection that will be used to prove the equivalence of statements within mathematics. In order to introduce this, the concept of the converse of a compound proposition is needed.
+
+</p>
+
+        <div class="space"></div>
+
+        <div class="theorem definition"> 
+            <h3>Definition 5.2: Converse </h3>
+            <p class="box"> 
+              The <em> <b> converse </b> </em> of the compound proposition $ P \Rightarrow Q $ is denoted by $ P \Leftarrow Q $ and defined via the following truth table:
+              \begin{equation*}
+              \begin{array}{c|c|c}
+              P &  Q & P \Leftarrow Q \\
+              \hline
+              T & T & T \\ 
+              T & F & T \\
+              F & T & F \\
+              F & F & T 
+              \end{array}
+              \end{equation*}
+            </p>
+        </div>
+
+        <div class="space"></div>
+
+<p>
+
+The compound proposition $ P \Leftarrow Q $ is often written as "$ P $ only if $ Q $" or "$ P $ is necessary for $Q$". It is then clear that $ P \Leftarrow Q $ is equivalent to $ Q \Rightarrow P $. This can easily be verified  through there respective truth tables. The converse of a compound proposition also demonstrates that if $ P \Rightarrow Q $ is true, it is not necessarily true that $ Q \Rightarrow P $. This is demonstrated in the following examples.
+
+</p>
+
+<div class="space"></div>
+
+        <div class="theorem example"> 
+            <h3>Example 5.3: Converse </h3>
+            <p class="box"> 
+              The following pairs of sentences are examples of propositions and their respective converses:              
+              <ol type="i" class="space_list">
+              <li> 1. If it is Tuesday, then it is a weekday.  <br> 2. If it is a weekday, then it is Tuesday.  </li>
+              <li> 1. If I am ill, then I cannot go to work.  <br> 2. If I cannot go to work, then I am ill.</li>
+              <li> 1. If I play tennis, then I am Rodger Federer. <br> 2. If I am Rodger Federer, then I play tennis.   </li>
+            </p>
+            </p>
+        </div>
+
+        <div class="space"></div>
+
+<p>
+
+Note that the last example in Example 5.3 is different to the other two as the intial statement is false, but the converse is true. One might then think that it is not possible for a proposition and its converse to be both true. In fact, $ P \Rightarrow Q $ and its converse are only true if $ P \Leftrightarrow Q $ is true. From this, one arrives at the conclusion that the compound proposition $ (P \Rightarrow Q) \land (P \Leftarrow Q) $ is equivalent to $ P \Leftrightarrow Q$. This is seen from the following truth table:
+</p>
+
+<div class="bigequation">
+\begin{equation*}
+\begin{array}{c|c|c|c|c}
+P &  Q & P \Rightarrow Q & P \Leftarrow Q & (P \Rightarrow Q) \land (P \Leftarrow Q) \\
+\hline
+T & T & T & T & T \\ 
+T & F & F & T & F \\
+F & T & T & F & F \\
+F & F & T & T & T
+\end{array}
+\end{equation*}
+</div>
+
+<p>
+That is to say that in order to prove a statement of the form $P \Leftrightarrow Q$, one needs to prove both $ P \Rightarrow Q $ and $ P \Leftarrow Q $. From this result, the equivalence operator $  \Leftrightarrow $ is often written as "$P$ if and only if $Q$" or alternatively "$P$ is necessary and sufficient for $Q$". 
+
+</p>
+
+
+<div class="space"></div>
+
+        <div class="theorem example"> 
+            <h3>Example 5.4: Equivalence and Converse </h3>
+            <p class="box"> 
+              The following pairs of statements are equivalent:
+              <ol type="i" class="space_list">
+              <li> 1. The number $6$ is even.  <br> 2. The number $6$ is divisible by $2$. </li>
+              <li> 1. $ 7 $ is a prime number. <br> 2. $ 7 $ is only divisible by $1$ and itself. </li>
+              <li> 1. All pigs have wings. <br> 2. All pigs can fly.  </li>
+            </p>
+        </div>
+
+<div class="space"></div>
+
+<p>
+  Once again, note that the last example in Example 5.4 may seem a little strange. This is an example where both statements are false. As it can be seen from the truth table of $ \Leftrightarrow $, a value of true can be assigned even if both statements are false. This is an example of such a case.   
+</p>
+
+<div class="space"></div>
+
+<!-- <div class="vidlectures">
+<iframe height="420" width="100%" allowfullscreen frameborder=0 src="https://echo360.org.uk/media/525f0f36-991b-4a37-9df6-907d8b97e8a0/public?autoplay=false&automute=true"></iframe>
+</div> -->
+
+
+<div class="left">
+  <a a href="2.4moduspoensandmodustollens.html"> <i class='bx bx-left-arrow-alt' ></i></a>
+  <p class="pages"> Previous page </p> 
+</div>
+
+
+</div>
+
+
+
+<script src="js/script.js"> </script> 
+
+
+</body>
+</html>
