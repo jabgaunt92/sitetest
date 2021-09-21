@@ -1,0 +1,197 @@
+<!DOCTYPE html>
+  <head>
+    <link rel="stylesheet" href="css/styles.css">
+    <link href='https://unpkg.com/boxicons@2.0.7/css/boxicons.min.css' rel='stylesheet'>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+
+    <script>
+      MathJax = {
+        tex: {
+          tags: 'ams',
+          inlineMath: [['$', '$'], ['\\(', '\\)']]
+        },
+        svg: {
+          fontCache: 'global'
+        }
+      };
+    </script>
+
+    <script src="https://polyfill.io/v3/polyfill.min.js?features=es6"></script> 
+    <script id="MathJax-script" async src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-mml-chtml.js"></script>
+   </head>
+
+<body>
+
+  <nav>
+    <div class="navbar">
+      <i class='bx bx-menu'></i>
+      <div class="logo"> Data Science </div>
+      <div class="nav-links">
+        <div class="sidebar-logo">
+          <span class="logo-name"></span>
+          <i class='bx bx-x' ></i>
+        </div>
+        <ul class="links">
+          <li>Calculus</li>
+          <li>
+            Linear Algebra
+            <i class='bx bxs-chevron-down htmlcss-arrow arrow  '></i>
+            <ul class="htmlCss-sub-menu sub-menu">
+              <li class="more">
+                <span>Week 2: Propositional Logic
+                <i class='bx bxs-chevron-right arrow more-arrow'></i>
+              </span>
+                <ul class="more-sub-menu sub-menu">
+                  <li><a href="2.1proppositionsandpropositionalvariables.html">2.1: Propositions and Propositional <br> <p style="margin-left:26px"> Variables </p> </a></li>
+                  <li><a href="2.2logicalconnectivesandunaryoperators.html">2.2: Logical Connectives and Unary <br> <p style="margin-left:28px"> Operators </p> </a></li>
+                  <li><a href="2.3binaryoperators.html">2.3: Binary Operators</a></li>
+                  <li><a href="#">2.4: Modus Ponens and Modus Tollens </a></li>
+                  <li><a href="#">2.5: Equivalence and Converse </a></li>
+                </ul>
+              </li>
+            </ul>
+          </li>
+        </ul>
+      </div>
+    </div>
+  </nav>
+  <script src="js/main.js"></script>
+
+
+
+<div id="maintext">
+
+
+        <h1>Binary Operators</h1>
+
+        <div class="space"></div>
+
+        <p>
+          Whilst the unary operators are useful in logic, the more ubiquitous and practical logical operators are the binary operators <b> <em>and </em> </b>, <b> <em> or </em> </b>, <b> <em> implies </em> </b> and <b> <em>equivalence </em> </b>. These are denoted by $ \land $, $ \lor $, $ \Rightarrow $ and $ \Leftrightarrow $ respectively. In particular, the implies operator allows for the construction of propositional variables of the form "If $\dots$ then $\dots $". That is, if one statement is true, then the next statement is automatically true. It is clear why this operator is of particular use in computer programming where each subsequent step of a program follows from the truth value of a previous step.    
+        </p>
+
+
+        <div class="space"></div>
+
+        <div class="theorem definition"> 
+            <h3>Definition 3.1: Binary Operators </h3>
+            <p class="box"> The <b> <em> binary operators </em> </b> $ \land $, $\lor$, $\Rightarrow $ and $\Leftrightarrow $ are defined via the following truth table:
+            <div class="bigequation">
+            \begin{equation*}
+            \begin{array}{c|c|c|c|c|c}
+            P &  Q & P \land Q & P \lor Q & P \Rightarrow Q & P \Leftrightarrow Q
+            \\ \hline
+            T & T & T & T & T & T\\ 
+            T & F & F & T & F & F\\
+            F & T & F & T & T & F\\
+            F & F & F & F & T & T
+            \end{array}
+            \end{equation*}
+            </div>
+            </p>
+        </div>
+
+        <div class="space"></div>
+
+<p>
+Again, it is now useful to analyse where the results of this truth table are motivated. The <em> and </em> operator $ \land $ effectively only assigns a value of true when both propositional variables are true. That is, both $P$ and $Q$ have to be true in order for $P \land Q $ to be true. Otherwise, the result is false. On the other hand, the <em> or </em> operator $ \lor $ assigns a value of true when either $P$ or $Q$ are true. The only false value is when both $P$ and $Q$ are false.  
+
+</p>
+
+        <div class="space"></div>
+
+        <div class="theorem example"> 
+            <h3>Example 3.2: $\land $ and $\lor $  </h3>
+            <p class="box"> 
+              The following are examples of propositions containing the $\land $ or $\lor $ operator:
+              <ol type="i" class="space_list">
+              <li> I will either take the bus or the train. </li>
+              <li> Tonight, I will eat both pizza and chips.  </li>
+              <li> The UK and the US both belong to the United Nations.  </li>
+              <li> I will watch TV and either eat ice cream or chocolate.  </li>
+            </p>
+        </div>
+
+        <div class="space"></div>
+
+<p>
+
+The last example demonstrates that multiple logical operators can be used with a single proposition. In this particular case both the $ \land $ operator and $ \lor $ operator has been used. It is also worth mentioning that a combination of both unary operators and binary operators could appear in a single proposition. 
+ 
+<br>
+<br>
+
+Before moving onto more examples, it is useful to introduce the following tautology that is fundamental to propositional logic. 
+
+</p>
+
+<div class="space"></div>
+
+        <div class="theorem"> 
+            <h3>Theorem 3.3: Law of Excluded Middle </h3>
+            <p class="box"> Let $P$ be a propositional variable. The compound proposition $ P \lor \neg P $ is a tautology. </p>  
+            <hr>
+            <p class="box">  
+              The above tautology is shown via the following truth table:
+              \begin{equation*}
+              \begin{array}{c|c|c}
+              P & \neg P & P \lor \neg P \\
+              \hline
+              T & F & T  \\ 
+              F & T & T  
+              \end{array}
+              \end{equation*}
+            </p>
+        </div>
+
+        <div class="space"></div>
+
+<p>
+
+The above tautology is very intuitive. It simply states that a proposition must be true or not true. That is to say that a proposition cannot be both true and not true. This will be very useful when wanting to construct what is known as a proof by contradiction. This will be discussed in more detail later.   
+<br>
+<br>
+Perhaps the most prevalent operators in all of logic and mathematics are the next two operators, namely <em>implies </em> and <em> equivalence </em>. The compound proposition $ P \Rightarrow Q $ is to be understood as "If $P$ then $Q$". That is, $ P $ implies $Q$ is true if both $P$ and $Q$ are true and $P$ implies $Q$ is false if $P$ is false and $Q$ is true. Another way of saying $P$ implies $Q$ is to say that $P$ is sufficient for $Q$. The remaining truth values of implies may then seem rather confusing, where a true value is assigned when $P$ is false. This follows as it is the case that a truth can always follow from a falsehood. That is, if the initial statement is false, a truth can always follow as a falsehood can imply anything.
+
+</p>
+
+
+<div class="space"></div>
+
+        <div class="theorem example"> 
+            <h3>Example 3.4: Implication </h3>
+            <p class="box"> 
+              The following are examples of propositions containing the implication operator: 
+            <ol type="i" class="space_list">
+              <li> If the Earth is in the solar system, then it is in the universe. </li>
+              <li> Pigs can fly, hence they have wings.   </li>
+              <li> $ 1=2 $, then $ 0 = 0 $.  </li>
+            </p>
+        </div>
+
+        <div class="space"></div>
+
+<p>
+
+The last two examples in Example 3.4 demonstrate this peculiar property that a falsehood can imply anything. Proposition (ii) is an example of one in which both statements are false, but the overall compound proposition is true. On the other hand, proposition (iii) is an example in which the first statement is false and the second statement is true. However, the overall compound proposition continues to be true. 
+
+</p>
+
+<div class="space"></div>
+
+<!-- <div class="vidlectures">
+<iframe height="420" width="100%" allowfullscreen frameborder=0 src="https://echo360.org.uk/media/525f0f36-991b-4a37-9df6-907d8b97e8a0/public?autoplay=false&automute=true"></iframe>
+</div> -->
+
+<div class="endspace"></div>
+
+</div>
+
+
+
+<script src="js/script.js"> </script> 
+
+
+</body>
+</html>

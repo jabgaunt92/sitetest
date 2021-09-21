@@ -1,0 +1,189 @@
+<!DOCTYPE html>
+  <head>
+    <link rel="stylesheet" href="css/styles.css">
+    <link href='https://unpkg.com/boxicons@2.0.7/css/boxicons.min.css' rel='stylesheet'>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+
+    <script>
+      MathJax = {
+        tex: {
+          tags: 'ams',
+          inlineMath: [['$', '$'], ['\\(', '\\)']]
+        },
+        svg: {
+          fontCache: 'global'
+        }
+      };
+    </script>
+
+    <script src="https://polyfill.io/v3/polyfill.min.js?features=es6"></script> 
+    <script id="MathJax-script" async src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-mml-chtml.js"></script>
+   </head>
+
+<body>
+
+  <nav>
+    <div class="navbar">
+      <i class='bx bx-menu'></i>
+      <div class="logo"> Data Science </div>
+      <div class="nav-links">
+        <div class="sidebar-logo">
+          <span class="logo-name"></span>
+          <i class='bx bx-x' ></i>
+        </div>
+        <ul class="links">
+          <li>Calculus</li>
+          <li>
+            Linear Algebra
+            <i class='bx bxs-chevron-down htmlcss-arrow arrow  '></i>
+            <ul class="htmlCss-sub-menu sub-menu">
+              <li class="more">
+                <span>Week 2: Propositional Logic
+                <i class='bx bxs-chevron-right arrow more-arrow'></i>
+              </span>
+                <ul class="more-sub-menu sub-menu">
+                  <li><a href="2.1proppositionsandpropositionalvariables.html">2.1: Propositions and Propositional <br> <p style="margin-left:26px"> Variables </p> </a></li>
+                  <li><a href="2.2logicalconnectivesandunaryoperators.html">2.2: Logical Connectives and Unary <br> <p style="margin-left:28px"> Operators </p> </a></li>
+                  <li><a href="2.3binaryoperators.html">2.3: Binary Operators</a></li>
+                  <li><a href="#">2.4: Modus Ponens and Modus Tollens </a></li>
+                  <li><a href="#">2.5: Equivalence and Converse </a></li>
+                </ul>
+              </li>
+            </ul>
+          </li>
+        </ul>
+      </div>
+    </div>
+  </nav>
+  <script src="js/main.js"></script>
+
+
+
+<div id="maintext">
+
+
+        <h1>Logical Connectives and Unary Operators</h1>
+
+        <div class="space"></div>
+
+        <p>
+          Logic is the framework in which is one able to understand how to move from one result to the next. Without logic, no reasonable argument or proof could be constructed. It is therefore a crucial concept to understand how one connects different propositional statements using logic. In logic, the process of connecting two statements is called a logical connective and introduced in the subsequent definition.            
+        </p>
+
+
+        <div class="space"></div>
+
+        <div class="theorem definition"> 
+            <h3>Definition 2.1: Logical Connectives/Operators </h3>
+            <p class="box"> A <b> <em>logical connective/operator </em> </b> is an operator that takes one or two propositional variables and produces a new propositional variable.
+            </p>
+        </div>
+
+        <div class="space"></div>
+
+<p>
+The logical operators that take one propositional variable and produce a new propositional variable are called <b> <em> unary operators </em> </b> whilst logical operators that take two propositional variables and produce a new propositional variable are called <b> <em> binary operators </em> </b>. Due to the restricted number of outputs a propositional variable can take there are few distinct unary operators. In fact, it is the case that there are only four possible unary operators. These operators are the <b> <em>negation </em> </b>, <b> <em>identity </em></b>, <b> <em>tautology </em> </b> and <b> <em> contradiction </em> </b> operators denoted by $ \neg $, $ \text{id} $, $ \top $ and $ \bot $ respectively. The precise definitions of these operators will be introduced later along with some useful binary operators.       
+
+</p>
+
+        <div class="space"></div>
+
+        <div class="theorem definition"> 
+            <h3>Definition 2.2: Compound Proposition  </h3>
+            <p class="box"> A <b> <em> compound proposition </em> </b> is a propositional variable that contains logical connectives. 
+            </p>
+        </div>
+
+        <div class="space"></div>
+
+<p>
+
+The propositional variables that contain no logical connectives are called <b> <em> atomic propositions </em></b>. In other words, the atomic propositions are the propositional variables that cannot be divided into further smaller propositional variables. 
+
+</p>
+
+<div class="space"></div>
+
+        <div class="theorem definition"> 
+            <h3>Definition 2.3: Valuation </h3>
+            <p class="box"> A <b> <em> valuation </em></b> is an assignment of all the possible values a compound proposition can take given all the possible values of its component atomic propositions.  
+            </p>
+        </div>
+
+        <div class="space"></div>
+
+<p>
+
+  A particularly useful way of representing valuations is through a truth table. A <b> <em> truth table </em> </b> is constructed by exploring all the possible truth values of the atomic propositions that build up the compound proposition, and then assigning the corresponding truth values of the compound proposition. Truth tables can be used to define logical connectives as well as proving equivalences of two different propositional variables. 
+
+</p>
+
+
+<div class="space"></div>
+
+        <div class="theorem definition"> 
+            <h3>Definition 2.4: Unary Operators </h3>
+            <p class="box"> The <b> <em> unary operators </em></b> $ \neg $, $ \text{id} $, $ \top $ and $ \bot $ are defined via the following truth table:          
+            \begin{equation*}
+            \begin{array}{c|c|c|c|c}
+            P & \neg P & \text{id}(P) & \top P & \bot P\\
+            \hline
+            T & F & T & T & F\\ 
+            F & T & F & T & F
+            \end{array}
+            \end{equation*}
+            </p>
+        </div>
+
+        <div class="space"></div>
+
+<p>
+
+  Exploring each of the unary operators individually it becomes clear where their definitions emerge from. The negation operator $ \neg $ simply negates the truth value of the propositional variable. That is, if a proposition is true its negation is false and vice-versa. The identity operator $ \text{id} $ doesn't change the truth value of the propositional variable. It acts exactly the same way as to a number being multiplied by one. The names of the final two unary operators become immediately apparent from the following two definitions.    
+
+</p>
+
+<div class="space"></div>
+
+        <div class="theorem definition"> 
+            <h3>Definition 2.5: Tautology </h3>
+            <p class="box"> A <b> <em> tautology </em> </b> is a propositional variable whose valuation is always true.  
+            </p>
+        </div>
+
+        <div class="space"></div>
+
+<div class="space"></div>
+
+        <div class="theorem definition"> 
+            <h3>Definition 2.6: Contradiction </h3>
+            <p class="box"> A <b> <em> contradiction </em> </b> is a propositional variable whose valuation is always false. 
+            </p>
+        </div>
+
+<div class="space"></div>
+
+
+<p>
+
+That is, the tautology operator $ \top $ assigns all values to be true and the contradiction operator $ \bot $ assigns all values to be false. 
+
+</p>
+
+<div class="space"></div>
+
+
+<!-- <div class="vidlectures">
+<iframe height="420" width="100%" allowfullscreen frameborder=0 src="https://echo360.org.uk/media/525f0f36-991b-4a37-9df6-907d8b97e8a0/public?autoplay=false&automute=true"></iframe>
+</div> -->
+
+<div class="endspace"></div>
+
+</div>
+
+
+<script src="js/script.js"> </script> 
+
+</body>
+</html>

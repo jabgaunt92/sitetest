@@ -1,0 +1,139 @@
+<!DOCTYPE html>
+  <head>
+    <link rel="stylesheet" href="css/styles.css">
+    <link href='https://unpkg.com/boxicons@2.0.7/css/boxicons.min.css' rel='stylesheet'>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+
+    <script>
+      MathJax = {
+        tex: {
+          tags: 'ams',
+          inlineMath: [['$', '$'], ['\\(', '\\)']]
+        },
+        svg: {
+          fontCache: 'global'
+        }
+      };
+    </script>
+
+    <script src="https://polyfill.io/v3/polyfill.min.js?features=es6"></script> 
+    <script id="MathJax-script" async src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-mml-chtml.js"></script>
+   </head>
+
+<body>
+
+  <nav>
+    <div class="navbar">
+      <i class='bx bx-menu'></i>
+      <div class="logo"> Data Science </div>
+      <div class="nav-links">
+        <div class="sidebar-logo">
+          <span class="logo-name"></span>
+          <i class='bx bx-x' ></i>
+        </div>
+        <ul class="links">
+          <li>Calculus</li>
+          <li>
+            Linear Algebra
+            <i class='bx bxs-chevron-down htmlcss-arrow arrow  '></i>
+            <ul class="htmlCss-sub-menu sub-menu">
+              <li class="more">
+                <span>Week 2: Propositional Logic
+                <i class='bx bxs-chevron-right arrow more-arrow'></i>
+              </span>
+                <ul class="more-sub-menu sub-menu">
+                  <li><a href="2.1proppositionsandpropositionalvariables.html">2.1: Propositions and Propositional <br> <p style="margin-left:26px"> Variables </p> </a></li>
+                  <li><a href="2.2logicalconnectivesandunaryoperators.html">2.2: Logical Connectives and Unary <br> <p style="margin-left:28px"> Operators </p> </a></li>
+                  <li><a href="2.3binaryoperators.html">2.3: Binary Operators</a></li>
+                  <li><a href="#">2.4: Modus Ponens and Modus Tollens </a></li>
+                  <li><a href="#">2.5: Equivalence and Converse </a></li>
+                </ul>
+              </li>
+            </ul>
+          </li>
+        </ul>
+      </div>
+    </div>
+  </nav>
+  <script src="js/main.js"></script>
+
+
+
+<div id="maintext">
+
+
+        <h1>Propositions and Propositional Variables</h1>
+
+        <div class="space"></div>
+
+        <p>
+Within area of data science it is crucial to understand how to construct and utilise computer algorithms. An algorithm can be effectively understood as a series of rigorous procedures in which each result follows from the truth of a previous result. Therefore,  it becomes apparent that in order to understand and construct algorithms one must first understand the underlying framework on which they are built. This framework is otherwise known as logic. In particular, this section will exclusively study the area of propositional logic. Here, the primary object of study are propositions, or more specifically propositional variables, and the logical operators that connect them. The clear starting point to this topic is then the definition of a proposition.         </p>
+
+
+        <div class="space"></div>
+
+        <div class="theorem definition"> 
+            <h3>Definition 1.1: Statement/Proposition </h3>
+            <p class="box"> A
+                <b> <em> statement/proposition </em></b> is a declarative sentence that must be either true or false. 
+            </p>
+        </div>
+
+        <div class="space"></div>
+
+        <div class="theorem example"> 
+            <h3>Example 1.2: Statement/Proposition  </h3>
+            <p class="box"> The following are examples of propositions:
+<ol type="i" class="space_list">
+<li> $ 2 $ is an integer. </li>
+<li> Paris is the capital city of France. </li>
+<li> The sun is purple. </li>
+</ol>
+            </p>
+        </div>
+
+        <div class="space"></div>
+
+<p>
+Note that the last sentence is still a statement, but is a false statement. The truth value of a particular statement or proposition has no bearing on whether it is a statement or not.  
+
+A neat way of checking whether a sentence is a proposition is to put the words "Is is true that" in front of the sentence and ask if this question makes sense. For example, the sentence "$ 2 $ is an integer" is indeed a proposition as it makes sense to ask "Is it true that $ 2 $ is an integer?". An example of a sentence that is not a proposition would be "Pythagoras' Theorem". The question "Is it true that Pythagoras' Theorem?" makes no sense and hence the sentence is not a proposition. A slight subtlety to this rule would be when addressing sentences of the form $ x > 2 $. That is sentences that contain a variable. It does make sense to ask "Is it true that $ x > 2 $?", however the truth of this sentence depends on the value of $ x $. Given that a specific truth value cannot be assigned, it is therefore not a proposition. Sentences of this form will be dealt with in a later section on first order logic. 
+
+</p>
+
+        <div class="space"></div>
+
+        <div class="theorem definition"> 
+            <h3>Definition 1.3: Propositional Variable  </h3>
+            <p class="box"> A
+                <b> <em> propositional variable </em></b> is a variable that takes values of either true or false.
+            </p>
+        </div>
+
+        <div class="space"></div>
+
+<p>
+A propositional variable is very similar to a numerical variable except that rather than taking values in the real numbers it takes propositions as its values. That is to say that it does not represent a specific proposition or statement but is simply a placeholder for any possible proposition. A capital $ P $ or $ Q $ will be used to denote a propositional variable similar to how $ x $ and $ y$ are used to denote numerical variables in algebra. Within the context of computing, a propositional variable may be understood as a function that only takes binary values. It is often the case that a true value is assigned to the number 1 and a false value is assigned the number 0.
+
+It is important to note that it is not the role of propositional logic to address whether a particular propositional variable is true or not. For the purposes of this course, propositional logic is simply a framework on which mathematical proofs will be constructed. Further, it may also be understood as the framework on which computer algorithms are built.
+
+</p>
+
+<div class="space"></div>
+
+
+<!-- <div class="vidlectures">
+<iframe height="420" width="100%" allowfullscreen frameborder=0 src="https://echo360.org.uk/media/525f0f36-991b-4a37-9df6-907d8b97e8a0/public?autoplay=false&automute=true"></iframe>
+</div> -->
+
+<div class="endspace"></div>
+
+
+</div>
+
+
+<script src="js/script.js"> </script> 
+
+</body>
+</html>
