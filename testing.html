@@ -8,11 +8,10 @@
     <script src="https://polyfill.io/v3/polyfill.min.js?features=es6"></script>
     <script id="MathJax-script" async src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-mml-chtml.js"></script>
 </head>
-<body>
+<body onload = "renderSceneExample2()">
     <svg id="SceneExample2" width="100%" viewBox="0 0 1920 1080" style="background-color:rgb(255, 255, 255, 1);"></svg>
 
-    <p>First of all, press render button. When the animation finished, play with the \(\Delta x\) slider. The slider goes from 0.01 to 1.0</p>
-    <button onclick="renderSceneExample2()">Render!</button>
+    <p>When the animation finished, play with the \(\Delta x\) slider. The slider goes from 0.01 to 1.0</p>
     <label for="dx">\(\Delta x\)</label>
     <input type="range" min="0.1" max="1.0" step="0.01" value="0.1" name="dx" class="slider" oninput="update(0, this.value)">
     <script src="SceneExample2.js"></script>
